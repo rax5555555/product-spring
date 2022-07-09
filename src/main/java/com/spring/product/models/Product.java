@@ -17,8 +17,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 public class Product {
-    private int id;
+    private Integer id;
     private String name;
-    private int cost;
-    private int quantity;
+    private Integer cost;
+    private Integer quantity;
 }

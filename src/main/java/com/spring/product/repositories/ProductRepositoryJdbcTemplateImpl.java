@@ -1,12 +1,16 @@
 package com.spring.product.repositories;
 
 import com.spring.product.models.Product;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Controller;
 
 import javax.sql.DataSource;
 import java.util.List;
 
+@Component
 public class ProductRepositoryJdbcTemplateImpl implements ProductsRepository {
 
 /**
@@ -28,6 +32,7 @@ public class ProductRepositoryJdbcTemplateImpl implements ProductsRepository {
 
     private JdbcTemplate jdbcTemplate;
 
+    @Autowired
     public ProductRepositoryJdbcTemplateImpl(DataSource dataSource) {
         this.jdbcTemplate = new JdbcTemplate(dataSource);
     }
