@@ -6,10 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * 15.11.2021
- * 20. Java IO
- *
- * @author Rakhmatullin Timur (First Software Engineering Platform)
+ * @author Rakhmatullin Timur
  * @version v1.0
  */
 @Data

@@ -5,21 +5,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Controller;
 
 import javax.sql.DataSource;
 import java.util.List;
 
+/**
+ * @author Timur Rakhmatullin
+ * @version 1.0
+ */
+
 @Component
 public class ProductRepositoryJdbcTemplateImpl implements ProductsRepository {
-
-/**
- * 26.11.2021
- * 24. SQL & JDBC
- *
- * @author Rakhmatullin Timur (First Software Engineering Platform)
- * @version v1.0
- */
 
     //language=SQL
     private static final String SQL_INSERT = "insert into product(name, cost, quantity) values(?, ?, ?)";
@@ -30,7 +26,7 @@ public class ProductRepositoryJdbcTemplateImpl implements ProductsRepository {
     //language=SQL
     private static final String SQL_SELECT_ALL_BY_PRICE = "select * from product";
 
-    private JdbcTemplate jdbcTemplate;
+    private final JdbcTemplate jdbcTemplate;
 
     @Autowired
     public ProductRepositoryJdbcTemplateImpl(DataSource dataSource) {

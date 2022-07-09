@@ -1,14 +1,12 @@
 package com.spring.product.repositories;
 
 import com.spring.product.models.Product;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 /**
- * 15.11.2021
- * 20. Java IO
- *
- * @author Sidikov Marsel (First Software Engineering Platform)
+ * @author Rakhmatullin Timur
  * @version v1.0
  */
 public interface ProductsRepository {
