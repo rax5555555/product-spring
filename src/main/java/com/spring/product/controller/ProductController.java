@@ -2,7 +2,6 @@ package com.spring.product.controller;
 
 import com.spring.product.forms.ProductForm;
 import com.spring.product.models.Product;
-import com.spring.product.repositories.ProductsRepository;
 import com.spring.product.services.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

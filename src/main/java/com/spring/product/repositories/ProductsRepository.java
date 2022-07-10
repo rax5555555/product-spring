@@ -9,6 +9,8 @@ import java.util.List;
  * @author Rakhmatullin Timur
  * @version v1.0
  */
+
+@Repository
 public interface ProductsRepository {
     List<Product> findAll();
 
