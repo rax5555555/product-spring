@@ -26,6 +26,12 @@ public class ProductRepositoryJdbcTemplateImpl implements ProductsRepository {
     //language=SQL
     private static final String SQL_SELECT_ALL_BY_PRICE = "select * from product";
 
+    //language=SQL
+    private static final String SQL_DELETE_BY_ID = "delete from product where id = ?";
+
+    //language=SQL
+    private static final String SQL_SELECT_BY_ID = "select * from product where id = ?";
+
     private final JdbcTemplate jdbcTemplate;
 
     @Autowired
@@ -55,6 +61,16 @@ public class ProductRepositoryJdbcTemplateImpl implements ProductsRepository {
     @Override
     public void save(Product product) {
         jdbcTemplate.update(SQL_INSERT, product.getName(), product.getCost(), product.getQuantity());
+    }
+
+    @Override
+    public void delete(Long productId) {
+        jdbcTemplate.update(SQL_DELETE_BY_ID, productId);
+    }
+
+    @Override
+    public Product findById(Long productId) {
+        return jdbcTemplate.queryForObject(SQL_SELECT_BY_ID, userRowMapper, productId);
     }
 
 }
