@@ -68,6 +68,7 @@ public class ProductController {
         return "props_of_product";
     }
 
+
     @PostMapping("/product/{product-id}/props")
     public String addPropToProduct(@PathVariable("product-id") Integer productId, @RequestParam("propId") Integer propId) {
         productService.addPropToProduct(productId, propId);
