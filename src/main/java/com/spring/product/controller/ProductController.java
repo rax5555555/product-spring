@@ -57,7 +57,7 @@ public class ProductController {
         return "redirect:/product";
     }
 
-//25:27
+
     @GetMapping("/product/{product-id}/props")
     public String getPropByUser(Model model, @PathVariable("product-id") Integer productId) {
         List<Prop> props = productService.getPropByUser(productId);
