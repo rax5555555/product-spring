@@ -67,4 +67,11 @@ public class ProductServiceImpl implements ProductService {
         prop.setOwner(product);
         propRepository.save(prop);
     }
+
+    @Override
+    public void update(Integer productId, ProductForm productForm) {
+        Product product = productsRepository.getById(productId);
+        product.setName(productForm.getName());
+        productsRepository.save(product);
+    }
 }

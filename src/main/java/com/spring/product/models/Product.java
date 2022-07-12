@@ -20,12 +20,24 @@ import java.util.List;
 @Entity
 @Table(name = "product")
 public class Product {
+
+    public enum Role {
+        ADMIN, USER
+    }
+    @Enumerated(value = EnumType.STRING)
+    private Role role;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
     private Integer cost;
     private Integer quantity;
+
+    @Column(unique = true)
+    private String email;
+
+    private String hashPassword;
 
     @OneToMany(mappedBy = "owner")
     private List<Prop> products;

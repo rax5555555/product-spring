@@ -19,16 +19,12 @@
     <tr>
         <th>ID</th>
         <th>name</th>
-        <th>cost</th>
-        <th>quantity</th>
         <th>Activity</th>
     </tr>
     <#list product as product>
         <tr>
             <td>${product.id}</td>
             <td>${product.name}</td>
-            <td>${product.cost}</td>
-            <td>${product.quantity}</td>
             <td>
                 <form method="post" action="/product/${product.id}/delete">
                     <input type="submit" value="Delete">

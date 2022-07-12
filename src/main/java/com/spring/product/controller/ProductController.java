@@ -53,7 +53,8 @@ public class ProductController {
     }
 
     @PostMapping("/product/{product-id}/update")
-    public String update(@PathVariable("product-id") Integer productId) {
+    public String update(@PathVariable("product-id") Integer productId, ProductForm productForm) {
+        productService.update(productId, productForm);
         return "redirect:/product";
     }
 

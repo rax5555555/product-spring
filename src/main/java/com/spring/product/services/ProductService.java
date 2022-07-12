@@ -22,4 +22,6 @@ public interface ProductService {
     List<Prop> getPropWithoutOwner();
 
     void addPropToProduct(Integer productId, Integer propId);
+
+    void update(Integer productId, ProductForm productForm);
 }

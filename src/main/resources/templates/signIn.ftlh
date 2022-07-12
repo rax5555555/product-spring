@@ -5,16 +5,17 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Имя</title>
+    <title>Registration</title>
 </head>
 <body>
-<h3>Name - ${product.name}</h3>
-<br>
-<form method="post" action="/product/${product.id}/update">
-    <label>
-        Name: <input name="name" value="${product.name}">
+<form method="post" action="/signIn">
+    <label>Email:
+        <input type="email" name="email" placeholder="Email">
     </label>
-    <input type="submit" value="Save">
+    <label>Password:
+        <input type="password" name="password" placeholder="Password">
+    </label>
+    <input type="submit" value="Registration">
 </form>
 </body>
 </html>
